@@ -1,7 +1,22 @@
 class Test:
     question_list = [
-        {"What is your name?\nA. Oleg\nB. Kate\nC. Semen\nD. Bot": "D"},
-        {"What is your last name?\nA. Kot\nB. Petrov\nC. BOT\nD. Vandam": "C"},
+        {"1. I ___ from Canada.\n\nA. is\nB. are\nC. am\nD. to be": "C"},
+        {"2. This is my friend. ___ name is Mike.\n\n"
+         "A. Her\nB. His\nC. Our\nD. He's": "B"},
+        {"3. Mike is ___.\n\nA. my sister's teammate\n"
+         "B. teammate my sister\nC. my sister teammate\n"
+         "D. my sister teammate's": "A"},
+        {"4. -Are you fine?\n    - No, I ___.\n\nA. am colding\n"
+         "B. am cold\nC. have cold\nD. was cold": "B"},
+        {"5. -What do you do?\n    - ___\n\nA. I am fine, thanks. And you?\n"
+         "B. I am Mike.\nC. I am a project manager.\nD. Your new neighbor.": "C"},
+        {"6. -Who are you?\n    - ___\n\nA. I am a project manager.\n"
+         "B. I'm OK, thanks.\nC. I'm Mike, your new teammate.\n"
+         "D. I'm American.": "C"},
+        {"7. ___ 20 people in this room.\n\nA. This is\n"
+         "B. There is\nC. They are\nD. There are": "D"},
+        {"8. Sorry, I can't speak. I ___ right now.\n\nA. driving\n"
+         "B. drive\nC. 'm driving\nD. drives": "C"},
     ]
     question_counter = 0
     count_right_answers = 0

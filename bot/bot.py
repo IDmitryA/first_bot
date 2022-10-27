@@ -65,7 +65,7 @@ def lets_go(message):
             questions.english_test.count_right_answers += 1
             bot.send_message(
                 message.chat.id,
-                "----->",
+                '\U0001F553',
                 reply_markup=markup,
             )
         else:
@@ -74,7 +74,7 @@ def lets_go(message):
             markup.add(button1)
             bot.send_message(
                 message.chat.id,
-                "----->",
+                '\U0001F553',
                 reply_markup=markup,
             )
 

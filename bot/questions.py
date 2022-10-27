@@ -3,7 +3,7 @@ class Test:
         {"What is your name?\nA. Oleg\nB. Kate\nC. Semen\nD. Bot": "D"},
         {"What is your last name?\nA. Kot\nB. Petrov\nC. BOT\nD. Vandam": "C"},
     ]
-
+    question_counter = 0
     count_right_answers = 0
     counter = 0
     counter_for_answers = -1
@@ -16,9 +16,13 @@ class Test:
     @staticmethod
     def change_counter():
         Test.counter += 1
-        Test.counter_for_answers += 1
         Test.current_item = Test.question_list[Test.counter]
         Test.current_question = list(Test.current_item.keys())[0]
+
+    @staticmethod
+    def change_right_answer():
+        Test.question_counter += 1
+        Test.counter_for_answers += 1
         Test.item_for_r_answer = Test.question_list[Test.counter_for_answers]
         Test.right_answer = list(Test.item_for_r_answer.values())[0]
 

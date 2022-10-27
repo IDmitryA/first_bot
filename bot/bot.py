@@ -10,10 +10,9 @@ def start(massage):
     markup = types.ReplyKeyboardMarkup(resize_keyboard=True)
     button1 = types.KeyboardButton("Let's go")
     markup.add(button1)
-    greeting = (
-        f"Hello, {massage.from_user.first_name}. I am a bot from CTRLSHIFT English school"
-        f" and I'll help you define your level"
-    )
+    greeting = f"Hello, {massage.from_user.first_name}." \
+               f" I am a bot from CTRLSHIFT English school and " \
+               f"I'll help you define your level"
     bot.send_message(massage.chat.id, greeting, reply_markup=markup)
 
 

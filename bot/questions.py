@@ -19,7 +19,8 @@ class Test:
         Test.counter_for_answers += 1
         Test.current_item = Test.question_list[Test.counter]
         Test.current_question = list(Test.current_item.keys())[0]
-        Test.item_for_right_answer = Test.question_list[Test.counter_for_answers]
+        Test.item_for_right_answer = \
+            Test.question_list[Test.counter_for_answers]
         Test.right_answer = list(Test.item_for_right_answer.values())[0]
 
 

@@ -9,7 +9,8 @@ class Test:
         {"4. -Are you fine?\n    - No, I ___.\n\nA. am colding\n"
          "B. am cold\nC. have cold\nD. was cold": "B"},
         {"5. -What do you do?\n    - ___\n\nA. I am fine, thanks. And you?\n"
-         "B. I am Mike.\nC. I am a project manager.\nD. Your new neighbor.": "C"},
+         "B. I am Mike.\nC. I am a project manager.\n"
+         "D. Your new neighbor.": "C"},
         {"6. -Who are you?\n    - ___\n\nA. I am a project manager.\n"
          "B. I'm OK, thanks.\nC. I'm Mike, your new teammate.\n"
          "D. I'm American.": "C"},

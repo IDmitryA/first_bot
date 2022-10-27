@@ -54,7 +54,7 @@ def lets_go(message):
                     button11 = types.KeyboardButton("Get result")
                     markup1.add(button11)
                     bot.send_message(
-                        message.chat.id, "Get result", reply_markup=markup1
+                        message.chat.id, "Get result?", reply_markup=markup1
                     )
                     bot.register_next_step_handler(message, end_of_test)
 
@@ -65,7 +65,16 @@ def lets_go(message):
             questions.english_test.count_right_answers += 1
             bot.send_message(
                 message.chat.id,
-                f"score = {questions.english_test.count_right_answers}",
+                "----->",
+                reply_markup=markup,
+            )
+        else:
+            markup = types.ReplyKeyboardMarkup(resize_keyboard=True)
+            button1 = types.KeyboardButton("Next")
+            markup.add(button1)
+            bot.send_message(
+                message.chat.id,
+                "----->",
                 reply_markup=markup,
             )
 

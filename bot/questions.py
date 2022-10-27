@@ -1,22 +1,8 @@
-
-
-'''count_right_answers = 0
-counter = 0
-question_list = [{"What is your name?\nA. Oleg\nB. Kate\nC. Semen\nD. Bot": "D"},
-                 {"What is your last name?\nA. Kot\nB. Petrov\nC. BOT\nD. Vandam": "C"}]
-
-questions_left = len(question_list)
-current_item = question_list[counter]
-current_question = list(current_item.keys())[0]
-right_answer = list(current_item.values())[0]
-
-print(count_right_answers)
-'''
-
-
 class Test:
-    question_list = [{"What is your name?\nA. Oleg\nB. Kate\nC. Semen\nD. Bot": "D"},
-                     {"What is your last name?\nA. Kot\nB. Petrov\nC. BOT\nD. Vandam": "C"}]
+    question_list = [
+        {"What is your name?\nA. Oleg\nB. Kate\nC. Semen\nD. Bot": "D"},
+        {"What is your last name?\nA. Kot\nB. Petrov\nC. BOT\nD. Vandam": "C"},
+    ]
 
     count_right_answers = 0
     counter = 0
@@ -38,4 +24,3 @@ class Test:
 
 
 english_test = Test()
-

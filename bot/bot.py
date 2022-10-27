@@ -1,7 +1,6 @@
-
+import questions
 import telebot
 from telebot import types
-import questions
 
 bot = telebot.TeleBot("5714586839:AAFLVZs--x0lS-QzFjS6zhJcH9O4zKi0R0A")
 
@@ -11,8 +10,10 @@ def start(massage):
     markup = types.ReplyKeyboardMarkup(resize_keyboard=True)
     button1 = types.KeyboardButton("Let's go")
     markup.add(button1)
-    greeting = f"Hello, {massage.from_user.first_name}. I am a bot from CTRLSHIFT English school" \
-               f" and I'll help you define your level"
+    greeting = (
+        f"Hello, {massage.from_user.first_name}. I am a bot from CTRLSHIFT English school"
+        f" and I'll help you define your level"
+    )
     bot.send_message(massage.chat.id, greeting, reply_markup=markup)
 
 
@@ -26,18 +27,22 @@ def lets_go(message):
             button3 = types.KeyboardButton("C")
             button4 = types.KeyboardButton("D")
             markup.add(button1, button2, button3, button4)
-            bot.send_message(message.chat.id, questions.english_test.current_question, reply_markup=markup)
+            bot.send_message(
+                message.chat.id,
+                questions.english_test.current_question,
+                reply_markup=markup,
+            )
             questions.english_test.change_counter()
         elif message.text == questions.english_test.right_answer:
             markup = types.ReplyKeyboardMarkup(resize_keyboard=True)
             button1 = types.KeyboardButton("Next")
             markup.add(button1)
             questions.english_test.count_right_answers += 1
-            bot.send_message(message.chat.id, f"score = {questions.english_test.count_right_answers}", reply_markup=markup)
-
-
-
-
+            bot.send_message(
+                message.chat.id,
+                f"score = {questions.english_test.count_right_answers}",
+                reply_markup=markup,
+            )
 
 
 bot.polling(none_stop=True)

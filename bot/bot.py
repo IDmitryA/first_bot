@@ -28,23 +28,35 @@ def lets_go(message):
             button3 = types.KeyboardButton("C")
             button4 = types.KeyboardButton("D")
             markup.add(button1, button2, button3, button4)
-            if questions.english_test.question_counter < questions.english_test.questions_left:
+            if (
+                questions.english_test.question_counter
+                < questions.english_test.questions_left
+            ):
                 bot.send_message(
                     message.chat.id,
                     questions.english_test.current_question,
                     reply_markup=markup,
                 )
-            if questions.english_test.question_counter < questions.english_test.questions_left - 1:
+            if (
+                questions.english_test.question_counter
+                < questions.english_test.questions_left - 1
+            ):
                 questions.english_test.change_counter()
                 questions.english_test.change_right_answer()
             else:
-                if questions.english_test.counter_for_answers < questions.english_test.questions_left - 1:
+                if (
+                    questions.english_test.counter_for_answers
+                    < questions.english_test.questions_left - 1
+                ):
                     questions.english_test.change_right_answer()
                 else:
                     markup1 = types.ReplyKeyboardMarkup(resize_keyboard=True)
                     button11 = types.KeyboardButton("Get result")
                     markup1.add(button11)
-                    bot.send_message(message.chat.id, "click 'Get result'", reply_markup=markup1)
+                    bot.send_message(
+                        message.chat.id,
+                        "click 'Get result'", reply_markup=markup1
+                    )
                     bot.register_next_step_handler(message, end_of_test)
 
         elif message.text == questions.english_test.right_answer:
@@ -62,7 +74,10 @@ def lets_go(message):
 def end_of_test(message):
     if message.text == "Get result":
         bot.send_message(message.chat.id, "Congrats")
-        bot.send_message(message.chat.id, f"Your result - {questions.english_test.count_right_answers}")
+        bot.send_message(
+            message.chat.id,
+            f"Your result - {questions.english_test.count_right_answers}",
+        )
 
 
 bot.polling(none_stop=True)

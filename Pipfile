@@ -9,6 +9,7 @@ black = "==22.10.0"
 isort = "==5.10.1"
 pytelegrambotapi = "==4.7.1"
 telebot = "==0.0.4"
+pre-commit = "*"
 
 [dev-packages]
 

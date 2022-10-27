@@ -54,8 +54,7 @@ def lets_go(message):
                     button11 = types.KeyboardButton("Get result")
                     markup1.add(button11)
                     bot.send_message(
-                        message.chat.id,
-                        "click 'Get result'", reply_markup=markup1
+                        message.chat.id, "Get result", reply_markup=markup1
                     )
                     bot.register_next_step_handler(message, end_of_test)
 

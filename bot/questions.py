@@ -15,7 +15,7 @@ class Test:
             "B. am cold\nC. have cold\nD. was cold": "B"
         },
         {
-            "5. -What do you do?\n    - __\n\nA. I am fine, thanks. And you?\n"
+            "5. -What do you do?\n    - ___\n\nA. I am fine, thanks. And you?\n"
             "B. I am Mike.\nC. I am a project manager.\n"
             "D. Your new neighbor.": "C"
         },
@@ -37,8 +37,8 @@ class Test:
     count_right_answers = 0
     counter = 0
     counter_for_answers = -1
-    questions_left = len(question_list)
-    current_item = question_list[counter]
+    questions_left: int = len(question_list)  # number of questions
+    current_item = question_list[counter]  # {question: answer} position
     current_question = list(current_item.keys())[0]
     item_for_r_answer = question_list[counter_for_answers]
     right_answer = list(item_for_r_answer.values())[0]
@@ -55,6 +55,13 @@ class Test:
         Test.counter_for_answers += 1
         Test.item_for_r_answer = Test.question_list[Test.counter_for_answers]
         Test.right_answer = list(Test.item_for_r_answer.values())[0]
+
+    @classmethod
+    def restart(cls):
+        cls.question_counter = 0
+        cls.count_right_answers = 0
+        cls.counter = 0
+        cls.counter_for_answers = -1
 
 
 english_test = Test()

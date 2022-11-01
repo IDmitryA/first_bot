@@ -15,7 +15,8 @@ class Test:
             "B. am cold\nC. have cold\nD. was cold": "B"
         },
         {
-            "5. -What do you do?\n    - ___\n\nA. I am fine, thanks. And you?\n"
+            "5. -What do you do?\n    - ___\n\n"
+            "A. I am fine, thanks. And you?\n"
             "B. I am Mike.\nC. I am a project manager.\n"
             "D. Your new neighbor.": "C"
         },

@@ -2,13 +2,27 @@ import random
 
 
 greeting_start_ukr = "Привіт, "
-greeting_end_ukr = "Я бот зі школи англійської мови CTRLSHIFT і я допоможу тобі визначити твій рівень англійської"
+greeting_end_ukr = "Я бот зі школи англійської мови CTRLSHIFT і " \
+                   "я допоможу тобі визначити твій рівень англійської"
 greeting_start_eng = "Hello, "
-greeting_end_eng = ". I am a bot from CTRLSHIFT English school and I'll help you define your level"
+greeting_end_eng = (
+    ". I am a bot from CTRLSHIFT English school and "
+    "I'll help you define your level"
+)
 
-msg_ukr = ["чудово, далі...", "молодець, так тримати...", "це було не складно, далі...",
-           "ага, зрозумів...", "не поспішай, часу вдосталь..."]
-msg_eng = ["great, go on...", "it was esy)...", "ok, understood...", "ofcourse you can, come on..."]
+msg_ukr = [
+    "чудово, далі...",
+    "молодець, так тримати...",
+    "це було не складно, далі...",
+    "ага, зрозумів...",
+    "не поспішай, часу вдосталь...",
+]
+msg_eng = [
+    "great, go on...",
+    "it was esy)...",
+    "ok, understood...",
+    "ofcourse you can, come on...",
+]
 
 rand_msg_ukr = random.choice(msg_ukr)
 rand_msg_eng = random.choice(msg_eng)

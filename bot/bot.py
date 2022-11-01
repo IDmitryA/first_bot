@@ -13,7 +13,7 @@ def start(massage):
     button1 = types.KeyboardButton("Українська")
     button2 = types.KeyboardButton("English")
     markup.add(button1, button2)
-    greeting = f"Оберіть мову спілкування"
+    greeting = "Оберіть мову спілкування"
     bot.send_message(massage.chat.id, greeting, reply_markup=markup)
 
 
@@ -29,9 +29,14 @@ def lets_go(massage):
             markup = types.ReplyKeyboardMarkup(resize_keyboard=True)
             button1 = types.KeyboardButton(lenguages.TextLanguage.button1)
             markup.add(button1)
-            greeting = f"{lenguages.TextLanguage.greeting_start}{massage.from_user.first_name}. {lenguages.TextLanguage.greeting_end}"
+            greeting = f"{lenguages.TextLanguage.greeting_start}" \
+                       f"{massage.from_user.first_name}. " \
+                       f"{lenguages.TextLanguage.greeting_end}"
             bot.send_message(massage.chat.id, greeting, reply_markup=markup)
-        elif massage.text in [lenguages.TextLanguage.button1, lenguages.TextLanguage.button2]:
+        elif massage.text in [
+            lenguages.TextLanguage.button1,
+            lenguages.TextLanguage.button2,
+        ]:
             markup = types.ReplyKeyboardMarkup(resize_keyboard=True)
             button1 = types.KeyboardButton("A")
             button2 = types.KeyboardButton("B")
@@ -61,11 +66,15 @@ def lets_go(massage):
                 ):
                     questions.english_test.change_right_answer()
                 else:
-                    markup1 = types.ReplyKeyboardMarkup(resize_keyboard=True)
-                    button11 = types.KeyboardButton(lenguages.TextLanguage.button4)
+                    markup1 = \
+                        types.ReplyKeyboardMarkup(resize_keyboard=True)
+                    button11 = \
+                        types.KeyboardButton(lenguages.TextLanguage.button4)
                     markup1.add(button11)
                     bot.send_message(
-                        massage.chat.id, lenguages.TextLanguage.question_result, reply_markup=markup1
+                        massage.chat.id,
+                        lenguages.TextLanguage.question_result,
+                        reply_markup=markup1,
                     )
 
                     bot.register_next_step_handler(massage, end_of_test)
@@ -96,7 +105,8 @@ def end_of_test(message):
     if message.text == lenguages.TextLanguage.button4:
         bot.send_message(
             message.chat.id,
-            f"{lenguages.TextLanguage.result} - {questions.english_test.count_right_answers}",
+            f"{lenguages.TextLanguage.result} -"
+            f" {questions.english_test.count_right_answers}",
         )
 
 

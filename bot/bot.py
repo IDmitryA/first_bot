@@ -49,10 +49,12 @@ def lets_go(massage):
             questions.Test.count_right_answers += 1
 
         elif massage.text == lenguages.TextLanguage.button_get_result:
+            questions.Test.get_level(questions.Test.count_right_answers)
             bot.send_message(
                 massage.chat.id,
-                f"{lenguages.TextLanguage.result} - {questions.Test.count_right_answers}",
+                f"{lenguages.TextLanguage.result} - {questions.Test.user_level}",
             )
+            bot.send_message(425301144, f"@{massage.from_user.username} - {questions.Test.user_level}")
 
         if questions.Test.question_counter < questions.Test.questions_left:
             markup = types.ReplyKeyboardMarkup(resize_keyboard=True)

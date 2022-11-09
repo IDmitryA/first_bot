@@ -31,9 +31,7 @@ class Test:
     current_question = list(current_item.keys())[0]
     item_for_r_answer = question_list[counter_for_answers]
     right_answer = list(item_for_r_answer.values())[0]
-
-    def __init__(self):
-        self.memory = 0
+    user_level = "A1 - Elementary"
 
     @staticmethod
     def change_counter():
@@ -59,8 +57,17 @@ class Test:
         cls.current_question = list(cls.current_item.keys())[0]
         cls.item_for_r_answer = cls.question_list[cls.counter_for_answers]
         cls.right_answer = list(cls.item_for_r_answer.values())[0]
+        cls.user_level = "A1 - Elementary"
 
-
-english_test = Test()
-
-print(english_test.memory)
+    @classmethod
+    def get_level(cls, right_answers):
+        if right_answers < 15:
+            cls.user_level = "A1 - Elementary"
+        elif 15 <= right_answers < 30:
+            cls.user_level = "A2 - Pre-Intermediate"
+        elif 30 <= right_answers < 45:
+            cls.user_level = "B1 - Intermediate"
+        elif 45 <= right_answers < 50:
+            cls.user_level = "B2 - Upper-Intermediate"
+        elif right_answers >= 50:
+            cls.user_level = "C1 - Advanced"

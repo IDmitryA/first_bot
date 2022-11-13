@@ -3,7 +3,14 @@ import questions
 import telebot
 from telebot import types
 
-bot = telebot.TeleBot("5714586839:AAFLVZs--x0lS-QzFjS6zhJcH9O4zKi0R0A")
+TOKEN = "5714586839:AAFLVZs--x0lS-QzFjS6zhJcH9O4zKi0R0A"
+TEACHER_CHAT_ID = 425301144
+
+bot = telebot.TeleBot(TOKEN)
+
+chats = {}
+# current_test = None
+"""____________________________________________________________________________________________________"""
 
 
 @bot.message_handler(commands=["start"])
@@ -15,13 +22,16 @@ def start(massage):
     markup.add(button1, button2)
     greeting = "Оберіть мову спілкування"
     bot.send_message(massage.chat.id, greeting, reply_markup=markup)
+    test_id = massage.chat.id
+    chats.update({test_id: questions.Test()})
+    # current_test = chats[test_id]
 
 
 @bot.message_handler(content_types=["text"])
 def lets_go(massage):
     if massage.chat.type == "private":
         if massage.text in ["Українська", "English"]:
-            questions.Test.restart()
+            chats[massage.chat.id].restart()
             if massage.text == "Українська":
                 lenguages.TextLanguage.choose_language("Українська")
             elif massage.text == "English":
@@ -45,18 +55,18 @@ def lets_go(massage):
             button5 = types.KeyboardButton(lenguages.TextLanguage.button_i_dont_know)
             markup.add(button1, button2, button3, button4, button5)
 
-        if massage.text == questions.Test.right_answer:
-            questions.Test.count_right_answers += 1
+        if massage.text == chats[massage.chat.id].right_answer:
+            chats[massage.chat.id].count_right_answers += 1
 
         elif massage.text == lenguages.TextLanguage.button_get_result:
-            questions.Test.get_level(questions.Test.count_right_answers)
+            chats[massage.chat.id].get_level(chats[massage.chat.id].count_right_answers)
             bot.send_message(
                 massage.chat.id,
-                f"{lenguages.TextLanguage.result} - {questions.Test.user_level}",
+                f"{lenguages.TextLanguage.result} - {chats[massage.chat.id].user_level}",
             )
-            bot.send_message(425301144, f"@{massage.from_user.username} - {questions.Test.user_level}")
+            bot.send_message(TEACHER_CHAT_ID, f"@{massage.from_user.username} - {chats[massage.chat.id].user_level}")
 
-        if questions.Test.question_counter < questions.Test.questions_left:
+        if chats[massage.chat.id].question_counter < chats[massage.chat.id].questions_left:
             markup = types.ReplyKeyboardMarkup(resize_keyboard=True)
             button1 = types.KeyboardButton("A")
             button2 = types.KeyboardButton("B")
@@ -66,16 +76,16 @@ def lets_go(massage):
             markup.add(button1, button2, button3, button4, button5)
             bot.send_message(
                 massage.chat.id,
-                questions.Test.current_question,
+                chats[massage.chat.id].current_question,
                 reply_markup=markup,
             )
 
-            if questions.Test.question_counter < questions.Test.questions_left - 1:
-                questions.Test.change_counter()
-                questions.Test.change_right_answer()
+            if chats[massage.chat.id].question_counter < chats[massage.chat.id].questions_left - 1:
+                chats[massage.chat.id].change_counter()
+                chats[massage.chat.id].change_right_answer()
 
-            elif questions.Test.counter_for_answers < questions.Test.questions_left - 1:
-                questions.Test.change_right_answer()
+            elif chats[massage.chat.id].counter_for_answers < chats[massage.chat.id].questions_left - 1:
+                chats[massage.chat.id].change_right_answer()
 
         else:
             if massage.text != lenguages.TextLanguage.button_get_result:

@@ -33,41 +33,37 @@ class Test:
     right_answer = list(item_for_r_answer.values())[0]
     user_level = "A1 - Elementary"
 
-    @staticmethod
-    def change_counter():
-        Test.counter += 1
-        Test.current_item = Test.question_list[Test.counter]
-        Test.current_question = list(Test.current_item.keys())[0]
+    def change_counter(self):
+        self.counter += 1
+        self.current_item = self.question_list[self.counter]
+        self.current_question = list(self.current_item.keys())[0]
 
-    @staticmethod
-    def change_right_answer():
-        Test.question_counter += 1
-        Test.counter_for_answers += 1
-        Test.item_for_r_answer = Test.question_list[Test.counter_for_answers]
-        Test.right_answer = list(Test.item_for_r_answer.values())[0]
+    def change_right_answer(self):
+        self.question_counter += 1
+        self.counter_for_answers += 1
+        self.item_for_r_answer = self.question_list[self.counter_for_answers]
+        self.right_answer = list(self.item_for_r_answer.values())[0]
 
-    @classmethod
-    def restart(cls):
-        cls.question_counter = 0
-        cls.count_right_answers = 0
-        cls.counter = 0
-        cls.counter_for_answers = -1
-        cls.questions_left: int = len(cls.question_list)
-        cls.current_item = cls.question_list[cls.counter]
-        cls.current_question = list(cls.current_item.keys())[0]
-        cls.item_for_r_answer = cls.question_list[cls.counter_for_answers]
-        cls.right_answer = list(cls.item_for_r_answer.values())[0]
-        cls.user_level = "A1 - Elementary"
+    def restart(self):
+        self.question_counter = 0
+        self.count_right_answers = 0
+        self.counter = 0
+        self.counter_for_answers = -1
+        self.questions_left: int = len(self.question_list)
+        self.current_item = self.question_list[self.counter]
+        self.current_question = list(self.current_item.keys())[0]
+        self.item_for_r_answer = self.question_list[self.counter_for_answers]
+        self.right_answer = list(self.item_for_r_answer.values())[0]
+        self.user_level = "A1 - Elementary"
 
-    @classmethod
-    def get_level(cls, right_answers):
-        if right_answers < 15:
-            cls.user_level = "A1 - Elementary"
+    def get_level(self, right_answers):
+        if right_answers < 15:  # 15
+            self.user_level = "A1 - Elementary"
         elif 15 <= right_answers < 30:
-            cls.user_level = "A2 - Pre-Intermediate"
+            self.user_level = "A2 - Pre-Intermediate"
         elif 30 <= right_answers < 45:
-            cls.user_level = "B1 - Intermediate"
+            self.user_level = "B1 - Intermediate"
         elif 45 <= right_answers < 50:
-            cls.user_level = "B2 - Upper-Intermediate"
+            self.user_level = "B2 - Upper-Intermediate"
         elif right_answers >= 50:
-            cls.user_level = "C1 - Advanced"
+            self.user_level = "C1 - Advanced"

@@ -1,20 +1,12 @@
 class Test:
     question_list = [
-        {
-            "1. I ___ from Canada.\n\n"
-            "A. is\nB. are\nC. am\nD. to be": "C"
-        },
-        {
-            "2. This is my friend. ___ name is Mike.\n\n"
-            "A. Her\nB. His\nC. Our\nD. He's": "B"
-        },
+        {"1. I ___ from Canada.\n\n" "A. is\nB. are\nC. am\nD. to be": "C"},
+        {"2. This is my friend. ___ name is Mike.\n\n" "A. Her\nB. His\nC. Our\nD. He's": "B"},
         {
             "3. Mike is ___.\n\n"
             "A. my sister's teammate\nB. teammate my sister\nC. my sister teammate\nD. my sister teammate's": "A"
         },
-        {
-            "4. -Are you fine?\n    - No, I ___.\n\n"
-            "A. am colding\n" "B. am cold\nC. have cold\nD. was cold": "B"},
+        {"4. -Are you fine?\n    - No, I ___.\n\n" "A. am colding\n" "B. am cold\nC. have cold\nD. was cold": "B"},
         {
             "5. -What do you do?\n    - ___\n\n"
             "A. I am fine, thanks. And you?\nB. I am Mike.\nC. I am a project manager.\nD. Your new neighbor.": "C"
@@ -23,34 +15,17 @@ class Test:
             "6. -Who are you?\n    - ___\n\n"
             "A. I am a project manager.\nB. I'm OK, thanks.\nC. I'm Mike, your new teammate.\nD. I'm American.": "C"
         },
-        {
-            "7. ___ 20 people in this room.\n\n"
-            "A. This is\n" "B. There is" "\nC. They are\nD. There are": "D"
-        },
-        {
-            "8. Sorry, I can't speak. I ___ right now.\n\n"
-            "A. driving\n" "B. drive\n" "C. 'm driving\nD. drives": "C"
-        },
-        {
-            "9. I speak Spanish, but Lisa ___ .\n\n"
-            "A. don't speaks\nB. doesn't\nC. not speaks\n" "D. not speak": "B"
-        },
-        {
-            "10. She ___ at work last week.\n\n"
-            "A. didn't be\nB. wasn't\nC. weren't\nD. isn't": "B"
-        },
+        {"7. ___ 20 people in this room.\n\n" "A. This is\n" "B. There is" "\nC. They are\nD. There are": "D"},
+        {"8. Sorry, I can't speak. I ___ right now.\n\n" "A. driving\n" "B. drive\n" "C. 'm driving\nD. drives": "C"},
+        {"9. I speak Spanish, but Lisa ___ .\n\n" "A. don't speaks\nB. doesn't\nC. not speaks\n" "D. not speak": "B"},
+        {"10. She ___ at work last week.\n\n" "A. didn't be\nB. wasn't\nC. weren't\nD. isn't": "B"},
         {
             "11. - ___ do you go to the gym?\n    - Twice a week. .\n\n"
-            "A. How often\nB. Why\nC. How\n" "D. How many": "A"
+            "A. How often\nB. Why\nC. How\n"
+            "D. How many": "A"
         },
-        {
-            "12. I like ___ before bedtime.\n\n"
-            "A. read\nB. to reading\nC. am reading\nD. reading": "D"
-        },
-        {
-            "13. I ___ when I was 4 years old.\n\n"
-            "A. can swim\nB. could swim\nC. could to swim\n" "D. can't swim": "B"
-        },
+        {"12. I like ___ before bedtime.\n\n" "A. read\nB. to reading\nC. am reading\nD. reading": "D"},
+        {"13. I ___ when I was 4 years old.\n\n" "A. can swim\nB. could swim\nC. could to swim\n" "D. can't swim": "B"},
         {
             "14. They ___ in the office when suddenly there was a blackout.\n\n"
             "A. worked\nB. was working\nC. are working\nD. were working": "D"
@@ -63,26 +38,14 @@ class Test:
             "16. I went to the bookshop ___ 'Harry Potter'.\n\n"
             "A. for buy\nB. to buy\nC. to buying\nD. for to buy": "B"
         },
-        {
-            "17. We will stay at home if it ___ tomorrow. .\n\n"
-            "A. rains\nB. will rain\n" "C. raining\nD. is rain": "A"
-        },
-        {
-            "18. Mike plays football ___ than me.\n\n"
-            "A. more good\nB. more better\nC. best\nD. better": "D"
-        },
+        {"17. We will stay at home if it ___ tomorrow. .\n\n" "A. rains\nB. will rain\n" "C. raining\nD. is rain": "A"},
+        {"18. Mike plays football ___ than me.\n\n" "A. more good\nB. more better\nC. best\nD. better": "D"},
         {
             "19. He doesn't smoke now  but he ___ much 20 years ago.\n\n"
             "A. used to smoke\nB. was smoking\nC. has smoked\nD. was smoked": "A"
         },
-        {
-            "20. He passed his English evaluation very ___.\n\n"
-            "A. easy\nB. easier\nC. good\nD. easily": "D"
-        },
-        {
-            "21. I can't stand ___ in a stuffy office.\n\n"
-            "A.  to work\nB. working\nC. work\n" "D. to working": "B"
-        },
+        {"20. He passed his English evaluation very ___.\n\n" "A. easy\nB. easier\nC. good\nD. easily": "D"},
+        {"21. I can't stand ___ in a stuffy office.\n\n" "A.  to work\nB. working\nC. work\n" "D. to working": "B"},
         {
             "22. Let's go somewhere else. There's ___ noise in this room.\n\n"
             "A. too many\nB. too much\nC. enough\nD. too": "B"
@@ -119,10 +82,7 @@ class Test:
             "30. If you don't want to burn out at work, you ___ work without rest days.\n\n"
             "A. won't\nB. don't\nC. shouldn't\nD. couldn't": "C"
         },
-        {
-            "31. If I have enough money next year, I ___ to the USA.\n\n"
-            "A. will go\nB. go\nC. would go\nD. went": "A"
-        },
+        {"31. If I have enough money next year, I ___ to the USA.\n\n" "A. will go\nB. go\nC. would go\nD. went": "A"},
         {
             "32. It's the best movie ___. You should go and see it.\n\n"
             "A. I ever saw\nB. I've already seen\nC. I've never seen\nD. I've ever seen": "D"
@@ -143,10 +103,7 @@ class Test:
             "36. I ___ be late for work this morning. I've got a lot to do before midday.\n\n"
             "A. don't have to\nB. couldn't\nC. don't\nD. mustn't": "D"
         },
-        {
-            "37. I ___ here for 2 years now.\n\n"
-            "A. work\nB. am working\nC. have been working\nD. worked": "C"
-        },
+        {"37. I ___ here for 2 years now.\n\n" "A. work\nB. am working\nC. have been working\nD. worked": "C"},
         {
             "38. A lot ___ to the house before we can move in.\n\n"
             "A. needs be doing\nB. needs done\nC. needs do\nD. needs to be done": "D"
@@ -171,18 +128,9 @@ class Test:
             "43. Look at the pile of work I have today! It ___ a hard day.\n\n"
             "A. will be\nB. is going to be\nC. will\nD. might be": "B"
         },
-        {
-            "44. I think you ___ see a doctor.\n\n"
-            "A. need\nB. would\nC. should\nD. have to": "C"
-        },
-        {
-            "45. I am fed up ___ this task.\n\n"
-            "A. to do\nB. to doing\nC. with doing\nD. for doing": "C"
-        },
-        {
-            "46. If I were rich, I ___ a Ferrari.\n\n"
-            "A. 'd drive\nB. 'll drive\nC. will be driving\nD. drive": "A"
-        },
+        {"44. I think you ___ see a doctor.\n\n" "A. need\nB. would\nC. should\nD. have to": "C"},
+        {"45. I am fed up ___ this task.\n\n" "A. to do\nB. to doing\nC. with doing\nD. for doing": "C"},
+        {"46. If I were rich, I ___ a Ferrari.\n\n" "A. 'd drive\nB. 'll drive\nC. will be driving\nD. drive": "A"},
         {
             "47. If only he  ___ more time for his family. But he was always busy\n\n"
             "A. had had\nB. had\nC. has\nD. has had": "A"
@@ -199,10 +147,7 @@ class Test:
             "50. When I got home I realized that someone ___ the window.\n\n"
             "A. broke\nB. was broken\nC. had broken\nD. hadn't break": "C"
         },
-        {
-            "51. We'll need to have the house ___.\n\n"
-            "A. renovating\nB. renovate\nC. renovated\nD. to renovate": "C"
-        },
+        {"51. We'll need to have the house ___.\n\n" "A. renovating\nB. renovate\nC. renovated\nD. to renovate": "C"},
         {
             "52. At first I ___ starting work so early, but now I am OK with that.\n\n"
             "A. didn't use to\nB. wouldn't\nC. didn't have to\nD. wasn't used to": "D"
@@ -215,10 +160,7 @@ class Test:
             "54. He was made ___ a sweater with a snowman last Christmas.\n\n"
             "A. to wear\nB. wearing\nC. wear\nD. to wearing": "A"
         },
-        {
-            "55. I saw Mike ___ the room.\n\n"
-            "A. left\nB. to leave\nC. to leaving\nD. leave": "D"
-        }
+        {"55. I saw Mike ___ the room.\n\n" "A. left\nB. to leave\nC. to leaving\nD. leave": "D"},
     ]
     question_counter = 0
     count_right_answers = 0

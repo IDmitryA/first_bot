@@ -1,4 +1,5 @@
 class Test:
+    # chats = {}
     question_list = [
         {"1. I ___ from Canada.\n\n" "A. is\nB. are\nC. am\nD. to be": "C"},
         {"2. This is my friend. ___ name is Mike.\n\n" "A. Her\nB. His\nC. Our\nD. He's": "B"},

@@ -1,26 +1,7 @@
-import random
-
 greeting_start_ukr = "Привіт, "
 greeting_end_ukr = "Я бот зі школи англійської мови CTRLSHIFT і " "я допоможу тобі визначити твій рівень англійської"
 greeting_start_eng = "Hello, "
-greeting_end_eng = ". I am a bot from CTRLSHIFT English school and I'll help you define your level"
-
-msg_ukr = [
-    "чудово, далі...",
-    "молодець, так тримати...",
-    "це було не складно, далі...",
-    "ага, зрозумів...",
-    "не поспішай, часу вдосталь...",
-]
-msg_eng = [
-    "great, go on...",
-    "it was esy)...",
-    "ok, understood...",
-    "ofcourse you can, come on...",
-]
-
-rand_msg_ukr = random.choice(msg_ukr)
-rand_msg_eng = random.choice(msg_eng)
+greeting_end_eng = "I am a bot from CTRLSHIFT English school and I'll help you define your level"
 
 button1_eng = "Let's go"
 button2_eng = "Next"
@@ -45,7 +26,6 @@ start_ukr = "Натисни /start щоб спробувати ще раз"
 
 class TextLanguage:
     language = "English"
-    msg = msg_eng
     greeting_start = greeting_start_eng
     greeting_end = greeting_end_eng
     button_lets_go = button1_eng
@@ -60,7 +40,6 @@ class TextLanguage:
     def choose_language(cls, user_lang):
         cls.language = user_lang
         if cls.language == "Українська":
-            cls.msg = msg_ukr
             cls.greeting_start = greeting_start_ukr
             cls.greeting_end = greeting_end_ukr
             cls.button_lets_go = button1_ukr
@@ -71,7 +50,6 @@ class TextLanguage:
             cls.result = result_ukr
             cls.start = start_ukr
         elif cls.language == "English":
-            cls.msg = msg_eng
             cls.greeting_start = greeting_start_eng
             cls.greeting_end = greeting_end_eng
             cls.button_lets_go = button1_eng
